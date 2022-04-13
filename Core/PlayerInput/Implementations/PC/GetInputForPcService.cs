@@ -23,7 +23,7 @@ namespace Core.PlayerInput.Implementations.PC
 
             result.AttackButtonIsDown = this.getMouseInputService.IsLeftClickDown();
 
-            result = keyboardMovementMapperService.GetAndMapKeyboardMovementInput(ref result);
+            keyboardMovementMapperService.GetAndMapKeyboardMovementInput(ref result);
 
             return result;
         }
