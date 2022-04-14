@@ -10,7 +10,7 @@ namespace Core.PlayerInput.Implementations.PC
         bool IsLeftClickDown();
     }
 
-    public partial class GetMouseInputService : IGetMouseInputService
+    public sealed class GetMouseInputService : IGetMouseInputService
     {
         [DllImport("user32.dll")]
         private static extern bool GetAsyncKeyState(int button);
